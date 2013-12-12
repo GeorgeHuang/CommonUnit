@@ -253,4 +253,12 @@ public class Common
     { 
         Debug.Log(temp);
     }
+    public static bool compareFloat(float lhs, float rhs)
+    {
+        return Mathf.Abs(lhs - rhs) < 0.0001f;
+    }
+    public static bool compareVector3(Vector3 lhs, Vector3 rhs)
+    {
+        return (lhs - rhs).sqrMagnitude < 0.001f;
+    }
 }
