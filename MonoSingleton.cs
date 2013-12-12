@@ -11,7 +11,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
             if( m_Instance == null )
             {
                 m_Instance = GameObject.FindObjectOfType(typeof(T)) as T;
- 
+                /*
                 // Object not found, we create a temporary one
                 if( m_Instance == null )
                 {
@@ -25,6 +25,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
                     }
                 }
                 m_Instance.Init();
+                */ 
             }
             return m_Instance;
         }
