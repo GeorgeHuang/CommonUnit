@@ -78,6 +78,23 @@ public class Common
         }
         return null;
     }
+
+    static public GameObject deepFind(GameObject go, string name)
+    {
+        foreach (Transform ts in go.transform)
+        {
+            if (ts.name.Contains(name))
+                return ts.gameObject;
+            else
+            {
+                GameObject temp = deepFind(ts.gameObject, name);
+                if (temp != null)
+                    return temp;
+            }
+        }
+        return null;
+    }
+
 	static public void changGOParent(GameObject child, GameObject parent, bool reset = true)
     {
         if (child == null)
