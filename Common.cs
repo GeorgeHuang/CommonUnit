@@ -259,6 +259,6 @@ public class Common
     }
     public static bool compareVector3(Vector3 lhs, Vector3 rhs)
     {
-        return (lhs - rhs).sqrMagnitude < 0.001f;
+        return (lhs - rhs).sqrMagnitude < 0.000001f;
     }
 }
